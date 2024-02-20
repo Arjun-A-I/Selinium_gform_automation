@@ -31,16 +31,32 @@ while(count < 25):
         age = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, age_path)))
         age.click()
         
-        
-        # //*[@id="i37"]/div[3]/div
-        # //*[@id="i40"]/div[3]/div
-        
+      
         income_opt=random.choice([37,40,43,46,49])
         income_path=   f'//*[@id="i{income_opt}"]/div[3]/div'
         income = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, income_path)))
         income.click()
-    
+        
+        
+        edu_opt=random.choice([56,59,62,65,68])
+        edu_path=   f'//*[@id="i{edu_opt}"]/div[3]/div'
+        edu = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, edu_path)))
+        edu.click()
 
+        
+        frq_opt=random.choice([72,75,78,81,84])
+        frq_path=   f'//*[@id="i{frq_opt}"]/div[3]/div'
+        frq = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, frq_path)))
+        frq.click()
+        
+        awr_opt=random.choice([91,94,97,100])
+        awr_path=   f'//*[@id="i{awr_opt}"]/div[3]/div'
+        awr = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, awr_path)))
+        awr.click()
+        # //*[@id="i100"]/div[3]/div
+        # //*[@id="i91"]/div[3]/div
+        # //*[@id="i56"]/div[3]/div
+        # //*[@id="i59"]/div[3]/div/div
         
         
         q_count_1=8
