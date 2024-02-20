@@ -21,10 +21,25 @@ while(count < 25):
         
         # # Wait for the radio button to be clickable, then click
         gender_opt=random.choice([5,8,11])
-      
         gen_path=   f'//*[@id="i{gender_opt}"]/div[3]/div'
-        gender = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="i5"]/div[3]/div')))
+        gender = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, gen_path)))
         gender.click()
+        
+        
+        age_opt=random.choice([18,21,24,27,30])
+        age_path=   f'//*[@id="i{age_opt}"]/div[3]/div'
+        age = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, age_path)))
+        age.click()
+        
+        
+        # //*[@id="i37"]/div[3]/div
+        # //*[@id="i40"]/div[3]/div
+        
+        income_opt=random.choice([37,40,43,46,49])
+        income_path=   f'//*[@id="i{income_opt}"]/div[3]/div'
+        income = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, income_path)))
+        income.click()
+    
 
         
         
