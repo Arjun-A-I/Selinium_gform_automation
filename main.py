@@ -56,6 +56,11 @@ while(count < 25):
         q_count_2=25
         
         while(q_count_2<29):
+            opt = random.randint(1, 5)
+            radio_xpath = f'//*[@id="mG61Hd"]/div[2]/div/div[2]/div[{q_count_2}]/div/div/div[2]/div/span/div/label[{opt}]/div[2]/div/div/div[3]/div'
+            radio = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, radio_xpath)))
+            radio.click()
+            q_count_2=q_count_2+1
             
         
         
