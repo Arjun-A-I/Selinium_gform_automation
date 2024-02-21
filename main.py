@@ -1,24 +1,4 @@
-import time
-import chromedriver_binary
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import random
-driver = webdriver.Chrome()
-
-link = "https://docs.google.com/forms/d/e/1FAIpQLSfbDae8hZ-HnGO3dKab0Y_ZID_NfvCCHT-ZPy1onS7TfsNgbg/viewform"
-driver.get(link)
-
-count = 0
-# sub_path='//*[@id="mG61Hd"]/div[2]/div/div[3]/div/div[1]/div/span/span'
-# submit = driver.find_element((By.XPATH, sub_path))
-# submit.click()
-
-while(count<25):
-    # try:
-    import time 
+import time 
 import random
 import chromedriver_binary
 from webdriver_manager.chrome import ChromeDriverManager
@@ -104,22 +84,3 @@ while(count<25):
     count=count+1 
     
     driver.get(link)
-    # driver.quit()
-    sub_path='//*[@id="mG61Hd"]/div[2]/div/div[3]/div/div[1]/div/span/span'
-    submit = driver.find_element((By.XPATH, sub_path))
-    # submit = driver.find_element((By.XPATH, sub_path))
-    submit.click()
-    
-    
-    
-    
-# except Exception as e:
-#     print(f"Encountered an exception: {e}")
-#     break  # Exit the loop if there's an error
-    count += 1
-    driver.get(link)
-    
-
-# # Keep the browser open until the user decides to close it
-# input("Press Enter to close...")
-# driver.quit()
